@@ -8,8 +8,8 @@ class GetAllProducts {
 
     List<ProductModel> productsList = [];
 
-    for (int i = 0; i < data.length; i++) {
-      productsList.add(data[i]);
+    for (var item in data) {
+      productsList.add(ProductModel.fromJson(item)); // Convert map to ProductModel
     }
     return productsList;
   }

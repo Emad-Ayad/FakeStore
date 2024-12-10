@@ -1,5 +1,4 @@
 import 'package:dio/dio.dart';
-import 'package:flutter/material.dart';
 
 class Api {
   Dio dio = Dio();
@@ -58,7 +57,7 @@ class Api {
         options: Options(headers: headers),
       );
 
-      return response.data as Map<String, dynamic>;
+      return response.data;
     } catch (e) {
       // Log or handle the error as needed
       throw Exception("Failed to post data: $e");
